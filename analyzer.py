@@ -26,3 +26,12 @@ def analyze(data, header):
             print(f"  Std Dev: {np.std(column):.2f}")
         except ValueError:
             print(f"\n{header.upper()} - skipped (not numeric)")
+
+
+def main():
+    filename = input("Enter CSV filename: ")
+    headers, data = load_csv(filename)
+    if data is None:
+        return
+    print("\n--- CSV Analysis Report ---")
+    analyze(data, headers)
