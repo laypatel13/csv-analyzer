@@ -35,3 +35,5 @@ def main():
         return
     print("\n--- CSV Analysis Report ---")
     analyze(data, headers)
+
+main()
