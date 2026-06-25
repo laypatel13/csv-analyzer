@@ -1,21 +1,32 @@
 [build-system]
-requires = ["setuptools>=61.0"]
-build-backend = "setuptools.backends.legacy:build"
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "laypatel13-csv-analyzer"
 version = "0.1.0"
-description = "A CLI tool to analyze CSV files using NumPy"
-requires-python = ">=3.8"
+description = "A colorful CLI CSV analyzer using NumPy"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Lay Patel", email = "lay.patel.1313@gmail.com"}
+]
+keywords = ["cli", "csv", "analyzer", "numpy", "statistics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+]
 dependencies = [
-    "numpy",
-    "colorama",
-    "tabulate",
+    "numpy>=1.24.0",
+    "colorama==0.4.6",
+    "tabulate>=0.9.0",
 ]
 
 [project.scripts]
-laypatel13-csv-analyzer = "csv_analyzer.main:main"
+csv-analyzer = "csv_analyzer.main:main"
 
-[tool.setuptools.packages.find]
-where = ["."]
-include = ["csv_analyzer*"]
+[project.urls]
+Homepage = "https://github.com/laypatel13/csv-analyzer"
