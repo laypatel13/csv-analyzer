@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "laypatel13-csv-analyzer"
+version = "0.1.0"
+description = "A CLI tool to analyze CSV files using NumPy"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "colorama",
+    "tabulate",
+]
+
+[project.scripts]
+laypatel13-csv-analyzer = "csv_analyzer.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["csv_analyzer*"]
